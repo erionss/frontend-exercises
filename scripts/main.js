@@ -1,9 +1,23 @@
 document.addEventListener("DOMContentLoaded", () => {
-  document.getElementById("successBtn").addEventListener("click", () => {
-    showPopup("This is a success message!", "success");
+  const successBtn = document.getElementById("successBtn");
+  const errorBtn = document.getElementById("errorBtn");
+
+  successBtn.addEventListener("click", () => {
+    showSpinner();
+
+    setTimeout(() => {
+      hideSpinner();
+      showPopup("This is a success message!", "success");
+    }, 2000); // Simulate loading delay
   });
 
-  document.getElementById("errorBtn").addEventListener("click", () => {
-    showPopup("This is an error message!", "error");
+  errorBtn.addEventListener("click", () => {
+    showSpinner();
+
+    setTimeout(() => {
+      hideSpinner();
+      showPopup("This is an error message!", "error");
+    }, 2000); // Simulate loading delay
   });
 });
+

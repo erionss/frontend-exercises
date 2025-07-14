@@ -1,21 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Exercise 1 - Pop Up</title>
-  <link rel="stylesheet" href="styles/popup.css" />
-  <link rel="stylesheet" href="styles/main.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercise 1 - Pop Up</title>
+    <link rel="stylesheet" href="styles/popup.css" />
+    <link rel="stylesheet" href="styles/main.css" />
+    <link rel="stylesheet" href="styles/spinner.css" />
 </head>
+
 <body>
-  <h1>Exercise 1 - Pop Up Demo</h1>
-  <button id="successBtn">Show Success Pop Up</button>
-  <button id="errorBtn">Show Error Pop Up</button>
+    <h1>Pop Up and Loading Spinner</h1>
+    <button id="successBtn">Show Success Pop Up</button>
+    <button id="errorBtn">Show Error Pop Up</button>
 
-  <!-- Pop up container -->
-  <div id="popupContainer"></div>
+    <!-- Pop up container -->
+    <div id="popupContainer"></div>
 
-  <script src="scripts/popup.js"></script>
-  <script src="scripts/main.js"></script>
+    <!-- Spinner container -->
+    <div id="spinnerContainer" class="spinner-overlay hidden">
+        <div class="spinner"></div>
+    </div>
+
+
+    <script src="scripts/popup.js"></script>
+    <script src="scripts/main.js"></script>
+    <script src="scripts/spinner.js"></script>
 </body>
+
 </html>
