@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="styles/main.css" />
     <link rel="stylesheet" href="styles/spinner.css" />
     <link rel="stylesheet" href="styles/slider.css" />
+    <link rel="stylesheet" href="styles/testimonials.css" />
 </head>
 
 <body>
@@ -27,24 +28,33 @@
         </nav>
     </header>
 
-    <h1>Join us</h1>
+    <div class="container">
+        <h1>Join us</h1>
 
-    <div class="signup-container">
-        <input type="email" id="emailInput" placeholder="Enter your email" />
-        <button id="signupBtn">
-            Sign up free →
-        </button>
-    </div>
-
-    <div id="popupContainer"></div>
-
-    <div id="spinnerContainer" class="spinner-overlay hidden">
-        <div class="spinner"></div>
-    </div>
-
-    <div class="slider-container">
-        <div class="slider-track" id="sliderTrack">
+        <div class="signup-container">
+            <input type="email" id="emailInput" placeholder="Enter your email" />
+            <button id="signupBtn">
+                Sign up free →
+            </button>
         </div>
+
+        <div id="popupContainer"></div>
+
+        <div id="spinnerContainer" class="spinner-overlay hidden">
+            <div class="spinner"></div>
+        </div>
+
+        <div class="slider-container">
+            <div class="slider-track" id="sliderTrack">
+            </div>
+        </div>
+
+        <section id="testimonials-section" class="testimonials-section">
+            <h1>Customer Testimonials</h1>
+            <button id="sortBtn">Sort by Name (A–Z)</button>
+            <div class="testimonials-container" id="testimonialsContainer">
+            </div>
+        </section>
     </div>
 
 
@@ -52,9 +62,11 @@
     <script src="scripts/main.js"></script>
     <script src="scripts/spinner.js"></script>
     <script src="scripts/slider.js"></script>
+    <script src="scripts/testimonials.js"></script>
 </body>
 
 <footer class="footer">
     &copy; Copyright Erion Sylmetaj 2025
 </footer>
+
 </html>
