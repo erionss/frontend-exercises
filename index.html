@@ -4,21 +4,39 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Exercise 1 - Pop Up</title>
+    <title>Exercises</title>
     <link rel="stylesheet" href="styles/popup.css" />
     <link rel="stylesheet" href="styles/main.css" />
     <link rel="stylesheet" href="styles/spinner.css" />
 </head>
 
 <body>
-    <h1>Pop Up and Loading Spinner</h1>
-    <button id="successBtn">Show Success Pop Up</button>
-    <button id="errorBtn">Show Error Pop Up</button>
 
-    <!-- Pop up container -->
+    <header>
+        <nav class="navbar">
+            <div class="navbar-logo">UI Exercises</div>
+            <ul class="navbar-links">
+                <li><a href="#exercise1">Popup</a></li>
+                <li><a href="#exercise2">Spinner</a></li>
+                <li><a href="#exercise3">Sign Up</a></li>
+                <li><a href="#exercise4">Slider</a></li>
+                <li><a href="#exercise5">Company Popup</a></li>
+                <li><a href="#exercise6">Testimonials</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <h1>Join us</h1>
+
+    <div class="signup-container">
+        <input type="email" id="emailInput" placeholder="Enter your email" />
+        <button id="signupBtn">
+            Sign up free →
+        </button>
+    </div>
+
     <div id="popupContainer"></div>
 
-    <!-- Spinner container -->
     <div id="spinnerContainer" class="spinner-overlay hidden">
         <div class="spinner"></div>
     </div>

@@ -1,4 +1,131 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
 body {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
     background: linear-gradient(135deg, #e63946, #1d3557);
     min-height: 100vh;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+h1 {
+    margin-bottom: 2rem;
+    color: #0e57cd;
+    font-size: 2.2rem;
+}
+
+button {
+    background-color: #0e57cd;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 12px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin: 0.5rem;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: #0e57cd;
+    transform: translateY(-2px);
+}
+
+button:disabled {
+    background-color: #c6a5d6;
+    cursor: not-allowed;
+}
+
+.signup-container {
+    margin-top: 2rem;
+    display: flex;
+    gap: 0.5rem;
+}
+
+.signup-container input[type="email"] {
+    padding: 12px 15px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+    width: 250px;
+    outline: none;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.signup-container input[type="email"]:focus {
+    border-color: #0e57cd;
+    box-shadow: 0 0 5px rgba(76, 152, 175, 0.5);
+}
+
+/* Navbar styles */
+header {
+  width: 100%;
+  background-color: transparent;
+  color: #fff;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.8rem 1.5rem;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.navbar-logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+.navbar-links {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-links li {
+  display: inline;
+}
+
+.navbar-links a {
+  text-decoration: none;
+  color: #fff;
+  padding: 0.5rem 0.8rem;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+}
+
+.navbar-links a:hover {
+  background-color: #555;
+}
+
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .navbar-links {
+    flex-direction: column;
+    width: 100%;
+  }
+  .navbar-links a {
+    width: 100%;
+    display: block;
+  }
 }

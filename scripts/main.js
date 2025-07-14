@@ -1,23 +1,26 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const successBtn = document.getElementById("successBtn");
-  const errorBtn = document.getElementById("errorBtn");
+  const signupBtn = document.getElementById("signupBtn");
+  const emailInput = document.getElementById("emailInput");
 
-  successBtn.addEventListener("click", () => {
-    showSpinner();
+  signupBtn.addEventListener("click", () => {
+    const email = emailInput.value.trim();
 
-    setTimeout(() => {
-      hideSpinner();
-      showPopup("This is a success message!", "success");
-    }, 2000); // Simulate loading delay
-  });
-
-  errorBtn.addEventListener("click", () => {
-    showSpinner();
+    showButtonSpinner(signupBtn);
 
     setTimeout(() => {
-      hideSpinner();
-      showPopup("This is an error message!", "error");
-    }, 2000); // Simulate loading delay
+      if (validateEmail(email)) {
+        showPopup("Registration successful!", "success");
+      } else {
+        showPopup("Invalid email address!", "error");
+      }
+
+      hideButtonSpinner(signupBtn);
+    }, 2000);
   });
 });
 
+
+function validateEmail(email) {
+  const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  return re.test(email);
+}
